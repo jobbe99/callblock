@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/layout/activity_browser.xml",
-        "source": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/layout/activity_browser.xml"
+        "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/mirko/apps/callblock/src/main/res/layout/main.xml"
     },
     {
-        "merged": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/layout/main.xml"
+        "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/layout/activity_browser.xml",
+        "source": "/home/mirko/apps/callblock/src/main/res/layout/activity_browser.xml"
     }
 ]

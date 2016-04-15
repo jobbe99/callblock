@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/splash.png",
-        "source": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/drawable-hdpi/splash.png"
+        "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/drawable-hdpi-v4/splash.png",
+        "source": "/home/mirko/apps/callblock/src/main/res/drawable-hdpi/splash.png"
     },
     {
-        "merged": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/mirko/apps/callblock/src/main/res/drawable-hdpi/ic_launcher.png"
     }
 ]
