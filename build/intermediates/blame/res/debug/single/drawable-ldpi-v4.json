@@ -2,6 +2,7 @@
     {
         "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/drawable-ldpi-v4/splash.png",
         "source": "/home/mirko/apps/callblock/src/main/res/drawable-ldpi/splash.png"
+<<<<<<< HEAD
     },
     {
         "merged": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
@@ -12,6 +13,10 @@
         "source": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/drawable-ldpi/splash.png"
     },
     {
+=======
+    },
+    {
+>>>>>>> origin/master
         "merged": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
         "source": "/home/mirko/apps/callblock/src/main/res/drawable-ldpi/ic_launcher.png"
     }

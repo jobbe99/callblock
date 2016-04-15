@@ -137,7 +137,30 @@
             },
             {
                 "to": {
+<<<<<<< HEAD
                     "startLine": 9,
+=======
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 942,
+                    "endColumn": 41,
+                    "endOffset": 979
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 210,
+                        "endColumn": 41,
+                        "endOffset": 247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+>>>>>>> origin/master
                     "startColumn": 4,
                     "startOffset": 451,
                     "endColumn": 71,
@@ -232,7 +255,49 @@
             },
             {
                 "to": {
+<<<<<<< HEAD
                     "startLine": 14,
+=======
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1572,
+                    "endColumn": 91,
+                    "endOffset": 1659
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values/auth_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 253,
+                        "endColumn": 91,
+                        "endOffset": 340
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1664,
+                    "endColumn": 87,
+                    "endOffset": 1747
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values/auth_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 87,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+>>>>>>> origin/master
                     "startColumn": 4,
                     "startOffset": 1039,
                     "endColumn": 45,
@@ -303,12 +368,95 @@
                         "startOffset": 2238,
                         "endColumn": 49,
                         "endOffset": 2283
+<<<<<<< HEAD
+=======
                     }
                 }
             },
             {
                 "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1976,
+                    "endColumn": 218,
+                    "endOffset": 2190
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values/common_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 242,
+                        "endColumn": 222,
+                        "endOffset": 460
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2195,
+                    "endColumn": 88,
+                    "endOffset": 2279
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 368,
+                        "endColumn": 88,
+                        "endOffset": 452
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2284,
+                    "endColumn": 71,
+                    "endOffset": 2351
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 296,
+                        "endColumn": 71,
+                        "endOffset": 363
+>>>>>>> origin/master
+                    }
+                }
+            },
+            {
+                "to": {
+<<<<<<< HEAD
                     "startLine": 18,
+=======
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2356,
+                    "endColumn": 43,
+                    "endOffset": 2395
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 252,
+                        "endColumn": 43,
+                        "endOffset": 291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+>>>>>>> origin/master
                     "startColumn": 4,
                     "startOffset": 1263,
                     "endColumn": 39,
@@ -1006,6 +1154,47 @@
                         "startOffset": 2447,
                         "endColumn": 55,
                         "endOffset": 2498
+<<<<<<< HEAD
+=======
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5282,
+                    "endColumn": 95,
+                    "endOffset": 5373
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 114,
+                        "endColumn": 95,
+                        "endOffset": 205
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 5378,
+                    "endColumn": 58,
+                    "endOffset": 5432
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 58,
+                        "endOffset": 109
+>>>>>>> origin/master
                     }
                 }
             },
@@ -1162,6 +1351,30 @@
                         "endLine": 17,
                         "endColumn": 12,
                         "endOffset": 681
+<<<<<<< HEAD
+=======
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 6374,
+                    "endLine": 89,
+                    "endColumn": 10,
+                    "endOffset": 6793
+                },
+                "from": {
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/res/values/admob_iap_style.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 2,
+                        "startOffset": 53,
+                        "endLine": 9,
+                        "endColumn": 10,
+                        "endOffset": 472
+>>>>>>> origin/master
                     }
                 }
             }

@@ -19,6 +19,12 @@ ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:2:1-139:12
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:6:5-35
 uses-sdk
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:8:5-10:41
+<<<<<<< HEAD
+=======
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
+>>>>>>> origin/master
 	android:targetSdkVersion
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:10:9-38
 		INJECTED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml
@@ -55,6 +61,10 @@ ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:25:5-84
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:25:22-81
 uses-permission#android.permission.INTERNET
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:28:5-66
+<<<<<<< HEAD
+=======
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:20:5-66
+>>>>>>> origin/master
 	android:name
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:28:22-64
 uses-permission#android.permission.READ_PHONE_STATE
@@ -83,6 +93,12 @@ ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:39:2-60
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:39:16-57
 application
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:47:5-137:19
+<<<<<<< HEAD
+=======
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
+>>>>>>> origin/master
 	android:label
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:51:9-41
 	android:hardwareAccelerated
@@ -97,6 +113,10 @@ ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:47:5-137:19
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:48:9-54
 meta-data#com.google.android.gms.version
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:60:3-62:123
+<<<<<<< HEAD
+=======
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/AndroidManifest.xml:21:9-23:69
+>>>>>>> origin/master
 	android:configChanges
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:62:12-121
 	android:value
@@ -105,6 +125,10 @@ ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:60:3-62:123
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:60:14-59
 activity#com.google.android.gms.ads.AdActivity
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:65:3-68:16
+<<<<<<< HEAD
+=======
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:26:9-29:64
+>>>>>>> origin/master
 	android:configChanges
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:66:14-123
 	android:theme
@@ -191,5 +215,20 @@ meta-data#com.google.android.gms.analytics.globalConfigResource
 ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:131:3-132:44
 	android:resource
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:132:4-42
+<<<<<<< HEAD
 	android:name
 		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:131:14-82
+=======
+	android:name
+		ADDED from /home/mirko/apps/callblock/src/main/AndroidManifest.xml:131:14-82
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:21:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:21:22-76
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:30:9-31:52
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:31:13-50
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] /home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/AndroidManifest.xml:30:19-91
+>>>>>>> origin/master

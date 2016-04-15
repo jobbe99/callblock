@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -25,6 +26,8 @@
     },
     {
         "outputFile": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+=======
+>>>>>>> origin/master
         "map": [
             {
                 "to": {
@@ -35,13 +38,13 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/danieledirollo/Desktop/Android/callblock/app/src/main/res/values-sw720dp-land/dimens.xml",
+                    "file": "/home/mirko/apps/callblock/src/main/res/values-sw720dp-land/dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 205,
+                        "startOffset": 200,
                         "endColumn": 58,
-                        "endOffset": 259
+                        "endOffset": 254
                     }
                 }
             }
