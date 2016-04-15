@@ -24,7 +24,7 @@
 			</div>
 		<!--</div>-->
 		<!-- end topbar -->
-		
+
 		<!-- app content-->
 		<div class="app-content bg-blue">
 			<div class="app-content bg-blue">
@@ -444,15 +444,16 @@
 		AndroidFunction.interStart();
 		
 		var nExecCount = AndroidFunction.sharedGet( "execcount" );
-		if( nExecCount == "" || nExecCount == 0 ) {
-			App.load('info');
-			nExecCount = 0;
-		} else {
-			App.load("home");
-			
-			
-		}
-		
+		//if( nExecCount == "" || nExecCount == 0 ) {
+		//	App.load('info');
+		//	nExecCount = 0;
+		//} else {
+		//	App.load("home");
+		//}
+
+		nExecCount = 0;
+		App.load("home");
+
 		nExecCount++;
 		AndroidFunction.sharedPut( "execcount", nExecCount );
 		

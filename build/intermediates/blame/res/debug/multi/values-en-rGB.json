@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml",
+        "outputFile": "/home/mirko/apps/callblock/build/intermediates/res/merged/debug/values-en-rGB/values-en-rGB.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 349
                 },
                 "from": {
-                    "file": "/Users/danieledirollo/Desktop/Android/callblock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-en-rGB/common_strings.xml",
+                    "file": "/home/mirko/apps/callblock/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/res/values-en-rGB/common_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,

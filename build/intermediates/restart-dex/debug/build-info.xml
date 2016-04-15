@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="23"
-    density="560dpi"
+    abi="x86"
+    api-level="22"
+    density="xhdpi"
     format="7"
-    timestamp="1460592360224484000" >
+    timestamp="289568531651746" >
 
     <task
         name="javac"
@@ -20,13 +20,18 @@
         duration="0" />
 
     <artifact
-        location="/Users/danieledirollo/Desktop/Android/callblock/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/mirko/apps/callblock/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="1460592360224484000" >
+    <build timestamp="289159337600759" >
         <artifact
-            location="/Users/danieledirollo/Desktop/Android/callblock/app/build/outputs/apk/app-debug.apk"
+            location="/home/mirko/apps/callblock/build/outputs/apk/callblock-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="289568531651746" >
+        <artifact
+            location="/home/mirko/apps/callblock/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
