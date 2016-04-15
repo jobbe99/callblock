@@ -37,7 +37,6 @@
 
     <uses-feature android:name="android.hardware.telephony" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> 
@@ -110,10 +109,6 @@
         <meta-data
             android:name="com.google.android.gms.analytics.globalConfigResource"
             android:resource="@xml/global_tracker" />
-
-        <activity
-            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
-            android:theme="@style/Theme.IAPTheme" />
     </application>
 
 </manifest>
