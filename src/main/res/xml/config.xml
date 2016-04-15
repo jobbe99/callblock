@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        id        = "com.example.newsclub"
+        version   = "2.9.0">
+    <access origin="*"/>
+    <content src="index.html" />
+    <preference name="loglevel" value="DEBUG" />
+    
+    <plugin name="Device" value="org.apache.cordova.Device"/>
+    <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    
+    <cordova>
+		<access origin="http://127.0.0.1"/>
+		<access origin="*"/>
+	</cordova>
+
+</widget>
+

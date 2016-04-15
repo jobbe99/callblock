@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Call Center Block</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=no,
+                                   minimal-ui">
+    <link rel="stylesheet" href="appjs/app.min.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/boing.css"></head>
+  <body class="bg-blue">
+  
+  
+	<!-- home -->
+    <div class="app-page bg-blue tx-white" data-page="info">
+		
+		<!-- topbar -->
+		<!--<div class="app-ios-statusbar bg-blue">-->
+			<div class="app-topbar bg-blue">
+				<div class="app-title">CALL CENTER BLOCK</div>
+			</div>
+		<!--</div>-->
+		<!-- end topbar -->
+		
+		<!-- app content-->
+		<div class="app-content bg-blue">
+			<div class="app-content bg-blue">
+				<div class="app-section tx-blue">
+					<p>CallCenterBlock automatically locks the call center calls or other numbers you wish to refuse.</p>
+					<p>We maintain updated list of national and international call centers.</p>
+					<p>When you receive a phone call you can choose to lock the number in the future.</p>
+					<p>The App sends to our servers on the blocked phone number (number and time) to enable us to identify new numbers to be blocked.</p>
+					<p>No other data on your phone is sent to our server.</p>
+					<p>The data of your blocked calls will be used to identify other numbers to be blocked.</p>
+				</div>
+				<div class="app-section app-android-4">
+					<div class="app-button btnInfoClose">Close</div>
+				</div>
+			</div>
+		</div>
+		<!-- end app-content-->
+	</div>
+	<!-- end home -->
+
+  
+  	<!-- home -->
+    <div class="app-page bg-blue tx-white" data-page="home">
+		
+		<!-- topbar -->
+		<!--<div class="app-ios-statusbar bg-blue">-->
+			<div class="app-topbar bg-blue">
+				<div class="app-title">CALL CENTER BLOCK</div>
+			</div>
+		<!--</div>-->
+		<!-- end topbar -->
+		
+		<!-- app content-->
+		<div class="app-content bg-blue">
+			<div class="app-content bg-blue">
+				<div id="divInOut"></div>
+			</div>
+		</div>
+		<!-- end app-content-->
+	</div>
+	<!-- end home -->
+
+
+
+
+	
+
+	<div class="app-page bg-blue tx-white" data-page="block">
+		<div class="app-topbar bg-blue">
+			<div class="app-title">Blocked</div>
+		</div>
+
+		<div class="app-content bg-blue">
+			<div class="app-content bg-blue">
+				<div id="divBlock"></div>
+			</div>
+			<!-- end container -->		
+		</div>
+	</div>
+
+
+	<div class="app-page bg-blue tx-white" data-page="myblock">
+		<div class="app-topbar bg-blue">
+			<div class="app-title">My Block</div>
+		</div>
+
+		<!-- app content-->
+		<div class="app-content bg-blue">
+			<div class="app-content bg-blue">
+				<div id="divMyBlock"></div>
+			</div>
+		</div>
+		<!-- end app-content-->
+	</div>
+	
+
+
+	<div class="app-page bg-blue tx-white" data-page="settings">
+		<div class="app-topbar bg-blue">
+			<div class="app-title">Settings</div>
+		</div>
+		
+		<!-- app content-->
+		<div class="app-content bg-blue">
+			<div class="app-content bg-blue">
+				<div id="divMyWhite"></div>
+			</div>
+		</div>
+		<!-- end app-content-->
+			
+	</div>
+
+
+	
+	<!-- bottombar -->
+	<div class="app-bottombar">
+		<div class="tool-table">
+			<div class="cell app-button tool toolCall">last calls</div>
+			<div class="cell app-button tool toolBlock">blocked</div>
+			<div class="cell app-button tool toolMyBlock">Black List</div>
+			<div class="cell app-button tool toolSettings">White List</div>
+		</div>
+	</div>
+	<!-- end topbar -->
+	
+	
+	
+	<div class="divLoading">
+	    <div class="loading"><p></p></div>
+    </div>
+    
+	
+	
+    <script src="js/jquery.js"></script>
+    <script src="appjs/app.min.js"></script>    
+    <script>
+	
+	
+	App.setDefaultTransition('fade'); // global
+	//App.enableDragTransition();
+	
+	
+	//onDeviceReady();
+
+	var jsonCall = {
+		inout: 		new Array(),
+		blocked: 	new Array(),
+		myblock: 	new Array(),
+		strBlackList: '',
+		
+	};
+	
+	var db_incall = [];
+	
+	window.AndroidFunction = window.AndroidFunction || {
+		"sharedPut": function( k, v ){return "";},
+		"sharedGet": function( k ) {return "";},
+		"lastCallGet": function( k ) {return "";},
+		"interStart": function() {return "";}
+	}
+	
+	
+	
+
+	
+	function incomingAdd( n ) {
+		
+		AndroidFunction.sharedPut( "inout", JSON.stringify( jsonCall ) );
+		//alert("block");
+		
+		var r = n.split("|");
+		var ssend = {'cmd': 'put3', 'num':n }
+		dataSend( ssend, function(res) {
+			console.log( JSON.stringify( res ) );
+		});
+		
+	}
+	
+	
+	function blockListGet( callback ) {
+		
+	
+		// verifica se aggiornare o meno
+		var lastGet = AndroidFunction.sharedGet("lastGet");
+		var bUpdate = false;
+		
+		//alert(($.now() - lastGet)/1000);
+		if( lastGet == "" || ($.now() - lastGet)/1000 > 60 ) {
+			bUpdate = true
+			AndroidFunction.sharedPut( "lastGet", $.now().toString() );
+		} else {
+		}
+		
+			
+		var serverBlockList = '';
+		
+		if( bUpdate ) {
+			console.log( "update...");
+			
+			// carica la blacklist
+			jsGet( "get", "loading", function( res ) {
+				// salva la blacklist
+				if( res == "" ) 
+					serverBlockList = AndroidFunction.sharedGet( "blacklist" );
+				else
+					serverBlockList = res;
+
+				jsonCall.strBlackList = serverBlockList + "|" + myBlockList.join(',');
+				AndroidFunction.sharedPut( "blacklist", jsonCall.strBlackList );
+				callback();
+			
+			});
+		
+		} else {
+			console.log( "old...");
+
+			serverBlockList = AndroidFunction.sharedGet( "blacklist" );
+			jsonCall.strBlackList = serverBlockList + "|" + myBlockList.join(',');
+			AndroidFunction.sharedPut( "blacklist", jsonCall.strBlackList );
+			callback();
+
+		}
+		
+			
+			
+	}
+	
+	
+	
+	
+	
+
+	// 0: numero
+	// 1: 
+	
+	var arin;
+
+
+	App.controller('info', function (page) {
+		$(page).find('.btnInfoClose').on('click', function () {
+			App.load( "home" );
+		});
+	});
+	
+		
+	App.controller('home', function (page) {
+		
+		$(page).on('appLayout', function () {
+
+			blockListGet( function( res ) {
+
+				
+				// carica ultime chiamate
+				var jLast = AndroidFunction.lastCallGet( 20 );
+				if( jLast != "" ) {
+					jLast = {'data':JSON.parse(jLast) }
+				} else
+					jLast = [];
+				
+				
+				console.log( jsonCall.strBlackList.length );
+				/*
+				alert( jsonCall.strBlackList.length );
+				if( jsonCall.strBlackList.length < 100 )
+				alert( jsonCall.strBlackList );
+				*/
+				
+				loading( true );
+				
+				// confronta le chiamate con la blacklist
+				if( jLast != "" ) {
+					$.each( jLast.data, function(k,v) {
+						this.date = moment(parseInt(v.date)).format("HH:mm:ss DD-MM");
+						this.block = 0;
+						if( jsonCall.strBlackList.indexOf( v.num ) >= 0 ) {
+							//alert("trovato " + jsonCall.strBlackList.indexOf( v.num ) );
+							this.block = 1;
+						}
+						
+						if( v.num == "-2" || v.num == "-1" ) {
+							this.name = "Hidden number";
+							this.num = "---";
+							this.numid = "+";
+						}
+						this.numid = v.num.substr(1);
+					});
+				}
+			
+				
+				$("#divInOut").html( kite( tempLast, jLast ) );
+				loading( false );
+
+				
+			});
+		
+		});
+
+	});
+
+
+	
+	
+
+	App.controller('block', function (page) {
+		last = (new Date().getTime());
+		AndroidFunction.sharedPut( "last", last );
+		
+		
+		$(page).on('appLayout', function () {
+			
+			// carica le ultime chiamate bloccate
+			var incall = AndroidFunction.sharedGet( "incall" );
+			
+			// carica il db delle chiamate bloccate
+			var tmp = AndroidFunction.sharedGet( "incall_db" );
+
+
+			if( tmp == "" )
+				db_incall = [];
+			else 
+				db_incall = JSON.parse( tmp );
+				
+
+			//alert( "incall:" + incall );
+			
+			var call = incall.split(";");
+			var s;
+			var ar = [];
+			
+			for( n=0; n<call.length; n++ ) {
+				var r = call[n].split("|");
+				if( r[0].length > 0 ) {
+					db_incall.push( { 
+						'num':	r[0], 
+						'numid': r[0].substr(1),
+						'name': r[1],
+						't': moment(parseInt(r[2])).format("DD-MM-YYYY HH:mm:SS"),
+						'long': r[3], 'lat':r[4],
+						'block': 1 
+					});
+					
+					
+					
+				}
+			}
+			
+
+			if( incall.length > 0 ) {
+				AndroidFunction.sharedPut( "incall_db", JSON.stringify( db_incall ) );
+				AndroidFunction.sharedPut( "incall", "" );
+			}
+			
+			arin = {'inout':db_incall};	
+			//alert( JSON.stringify( arin ) );		
+			$("#divBlock").html( kite( tempBlock, arin ) );			
+		});
+	});
+
+
+
+	
+	App.controller('myblock', function (page) {
+		$(page).on('appLayout', function () {
+			
+			/*
+			var s = AndroidFunction.sharedGet( "myblock" );
+			var ar = JSON.parse( s );
+			*/
+			
+			var ar2 = [];
+			for( n=0; n<myBlockList.length; n++ ) {
+				p = {'num':myBlockList[n], 'numid': myBlockList[n].substr(1) };
+				ar2.push( p );
+			}
+			
+			
+			xarin = { 'inout': ar2 };
+			$("#divMyBlock").html( kite( tempMyBlock, xarin ) );			
+				
+		});
+	});
+
+
+
+	
+	App.controller('settings', function (page) {
+		
+		$(page).on('appLayout', function () {
+	
+			var ar2 = [];
+			for( n=0; n<myWhiteList.length; n++ ) {
+				p = {'num':myWhiteList[n], 'numid': myWhiteList[n].substr(1) };
+				ar2.push( p );
+			}
+			
+			xarin = { 'inout': ar2 };
+			$("#divMyWhite").html( kite( tempMyWhite, xarin ) );			
+		});
+		
+				
+		$(page).find('.btnReset').on('click', function () {
+		
+			//AndroidFunction.sharedPut( "incall", "" );
+			AndroidFunction.sharedPut( "myblock", "" );
+			AndroidFunction.sharedPut( "incall_db", "" );
+			
+			App.load( "home" );
+		});
+		
+		$(page).find('.btnLast').on('click', function () {
+			var jLast = AndroidFunction.lastCallGet( 10 );
+			//alert(jLast);
+			
+		});
+					
+	});
+	
+		
+	
+
+      /* put your javascript here */
+    </script>
+	
+	<script src="js/mytools.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/kite.js"></script>
+
+	<script src="js/raphael-2.1.4.min.js"></script>
+	<script src="js/justgage.js"></script>
+
+	<script>
+	try {
+		
+		// lancia interstitial
+		AndroidFunction.interStart();
+		
+		var nExecCount = AndroidFunction.sharedGet( "execcount" );
+		if( nExecCount == "" || nExecCount == 0 ) {
+			App.load('info');
+			nExecCount = 0;
+		} else {
+			App.load("home");
+			
+			
+		}
+		
+		nExecCount++;
+		AndroidFunction.sharedPut( "execcount", nExecCount );
+		
+				
+		App.setDefaultTransition('fade'); // global
+		App.enableDragTransition();
+
+	
+			
+	} catch (err) {
+		alert( err );
+	}
+	</script>
+  </body>
+</html>
