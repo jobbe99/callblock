@@ -1,5 +1,19 @@
 # App CallBlock
 Utilizzare Android Studio >= 2.0 con Gradle >= 2.0
+Se il progetto non si riesce ad avviare da subito su Android Studio, aprire il progetto manualmente ed approvare ogni richiesta di aggiornamento di `gradle`, modificare quindi il build.gradle aggiungendo queste righe ad inizio file (se non presenti):
+
+```json
+buildscript {
+    repositories {
+        jcenter() // or mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+    }
+}
+```
+
 
 ## Dove trovare i file HTML e JS?
 Navigando nella directory `src/main/assets/www` è possibile trovare i files HTML e JS
