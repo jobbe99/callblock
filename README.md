@@ -2,7 +2,7 @@
 Utilizzare Android Studio >= 2.0 con Gradle >= 2.0
 Se il progetto non si riesce ad avviare da subito su Android Studio, aprire il progetto manualmente ed approvare ogni richiesta di aggiornamento di `gradle`, modificare quindi il build.gradle aggiungendo queste righe ad inizio file (se non presenti):
 
-```json
+```
 buildscript {
     repositories {
         jcenter() // or mavenCentral()
