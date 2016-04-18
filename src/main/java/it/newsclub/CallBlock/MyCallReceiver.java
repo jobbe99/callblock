@@ -1,37 +1,17 @@
 package it.newsclub.CallBlock;
 
 
-import java.lang.reflect.Method;
-import java.math.BigInteger;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
-import com.android.internal.telephony.ITelephony;
-import com.google.analytics.tracking.android.Log;
-import com.google.android.gms.location.LocationClient;
-
 import android.content.BroadcastReceiver;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.database.Cursor;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.Uri;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.provider.CallLog;
-import android.provider.ContactsContract;
-import android.provider.ContactsContract.PhoneLookup;
-import android.support.v4.content.LocalBroadcastManager;
 import android.telephony.TelephonyManager;
-import android.text.format.Formatter;
 import android.widget.Toast;
+
+import com.android.internal.telephony.ITelephony;
+
+import java.lang.reflect.Method;
  
 
 public class MyCallReceiver extends BroadcastReceiver {
@@ -77,7 +57,7 @@ public class MyCallReceiver extends BroadcastReceiver {
 			    }
 				
             }catch (Exception e){  e.printStackTrace(); 
-				Log.e( "Errore");
+
             }
 
             

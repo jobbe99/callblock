@@ -2,34 +2,23 @@ package it.newsclub.CallBlock;
 
 
 
-import it.newsclub.CallBlock.R;
-
-import com.google.analytics.tracking.android.Log;
-
-
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
 
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 
 
